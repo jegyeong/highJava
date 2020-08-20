@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<!-- 
+		DB와 연결하는 정보를 properties파일에 설정해 놓고 이 properties파일의 내용을 읽어와 설정한다.
+	 -->
+	 <properties resource="dbinfo.properties"/>
+	 
+	 <!-- ibatis가 실행될 때 필요한 여러가지 옵션 설정하기 -->
+	 <!-- 보통 :  maxRequests >= maxSessions >= maxTransactions    -->
+	 <settings cacheModelsEnabled="true" enhancementEnabled="true"
+	 		lazyLoadingEnabled="true" maxRequests="128"
+	 		maxSessions="64" maxTransactions="16" useStatementNamespaces="true"/>
+	 		
+	 <!-- 
+	 	VO객체를 사용할 때 해당 객체의 이름을 지정해 주어야 하는데 이때 전체 패키지명까지 모두 기술해야 한다.
+	 	그렇게 되면 전제 이름의 길이가 너무 길어지는데 이 긴 이름을 대신해서 사용할 이름을 설정한다.
+	 	형식) <typeAlias alias="alias명" type="VO클래스의 전체이름"/>
+	  -->
+	  <typeAlias alias="jboardVo" type="kr.or.ddit.board.vo.JdbcBoardVO"/>
+	  
+	  
+	  <!-- DB와 연동하기 ==> 위에서 읽어오 properties파일의 내용으로 설정한다. -->
+	  <transactionManager type="JDBC">
+	  	<dataSource type="SIMPLE">
+	  		<property name="JDBC.Driver" value="${driver}"/>
+	  		<property name="JDBC.ConnectionURL" value="${url}"/>
+	  		<property name="JDBC.Username" value="${user}"/>
+	  		<property name="JDBC.Password" value="${pass}"/>
+	  	</dataSource>
+	  </transactionManager>
+	  
+	  <!-- 
+	  	처리할 SQL문은 따로 xml문서로 작성한 후 다음과 같은 형식으로 등록해 준다.
+	  	형식) <sqlMap resource="경로명/파일명.xml"/>
+	   -->
+	<sqlMap resource="kr/or/ddit/board/ibatis/jdbcboard.xml"/>
+</sqlMapConfig>	
+
+
+
+
+

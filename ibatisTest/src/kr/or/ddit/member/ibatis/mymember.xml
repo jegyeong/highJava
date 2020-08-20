@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="mymember">
+	<select id="getAllMember" resultClass="memVo">
+		select * from mymember
+	</select>
+	
+	<insert id="insertMember" parameterClass="memVo">
+		insert into mymember (mem_id, mem_name, mem_tel, mem_addr)
+		values (#mem_id#, #mem_name#,  #mem_tel#, #mem_addr#)
+	</insert>
+	
+	<select id="getMemberCount" resultClass="int" parameterClass="string">
+		select count(*) from mymember where mem_id = #mem_id#
+	</select>
+	
+	<delete id="deleteMember">
+		delete from mymember where mem_id = #mem_id#
+	</delete>
+	
+	<update id="updateMember" parameterClass="memVo">
+		update mymember set mem_name = #mem_name#,
+			mem_tel = #mem_tel#, mem_addr = #mem_addr#
+		where mem_id = #mem_id#
+	</update>
+	
+	<!-- 
+		- parameterClass를 Map으로 설정했을 경우에는 그 Map의 key값이
+		  VO의 변수명처럼 사용하면 된다.
+		
+		- 파라미터로 가져온 값을 컬럼명에 사용할 경우에는 달러기호($)를 사용한다.
+		    예) $변수명$  또는   $키값$
+	 -->
+	<update id="updateMember2" parameterClass="map">
+		update mymember 
+				set  $field$  = #data# 
+		where mem_id = #memId#
+	</update>
+	
+	<select id="getSearchMember" parameterClass="map" resultClass="memVo">
+		select * from mymember 
+		where  $field$ like '%' || #search# || '%'
+	</select>
+	
+
+</sqlMap>	
+
+
+
+
+
+
+
+

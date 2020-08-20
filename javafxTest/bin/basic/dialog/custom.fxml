@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="51.0" layoutY="65.0" text="이것은 새 창입니다.">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnOk" layoutX="251.0" layoutY="194.0" mnemonicParsing="false" text="닫  기" />
+   </children>
+</AnchorPane>

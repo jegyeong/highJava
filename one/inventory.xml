@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+    <computer serialno="12345">
+        <model>Win 10 Laptop</model>
+        <os>Windows 10</os>
+        <cpu>Intel i7</cpu>
+        <ram>12GB</ram>
+        <price>900.00</price>
+    </computer>
+    <computer serialno="P2233">
+        <model>Low Cost Windows Laptop</model>
+        <os>Windows 10 Home</os>
+        <cpu>Intel Pentium</cpu>
+        <ram>4GB</ram>
+        <price>313.00</price>
+    </computer>
+    <computer serialno="X01985">
+        <model>64 Bit Windows Desktop Computer</model>
+        <os>Windows 10 Home 64 Bit</os>
+        <cpu>AMD A8-Series</cpu>
+        <ram>8GB</ram>
+        <price>330.00</price>
+    </computer>
+    <computer serialno="APL888">
+        <model>Apple Desktop Computer</model>
+        <os>MAC OS X</os>
+        <cpu>Intel Core i5</cpu>
+        <ram>8GB</ram>
+        <price>1300.00</price>
+    </computer>
+    <computer serialno="AB1C48">
+        <model>Apple Low Cost Desktop Computer</model>
+        <os>OS X Yosemite</os>
+        <cpu>4th Gen Intel Core i5</cpu>
+        <ram>8GB</ram>
+        <price>700.00</price>
+    </computer>
+    <computer serialno="HP1C48">
+        <model>HP Low Cost Windows 10 Laptop</model>
+        <os>Windows 10 Home</os>
+        <cpu>AMD A6-Series</cpu>
+        <ram>4GB</ram>
+        <price>230.00</price>
+    </computer>
+    <computer serialno="W7D001">
+        <model>Windows 7 Desktop</model>
+        <os>Windows 7</os>
+        <cpu>6th Gen Intel Core i5</cpu>
+        <ram>6GB</ram>
+        <price>750.00</price>
+    </computer>
+    <computer serialno="HPHELC555">
+        <model>HP High End, Low Cost 64 Bit Desktop</model>
+        <os>Windows 10 Home 64 Bit</os>
+        <cpu>6th Gen Intel Core i7</cpu>
+        <ram>12GB</ram>
+        <price>800.00</price>
+    </computer>
+</inventory>

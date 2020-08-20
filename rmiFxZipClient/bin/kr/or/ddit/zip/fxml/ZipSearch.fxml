@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.zip.main.ZipSearchController">
+   <top>
+      <HBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="cmbSelect" prefWidth="150.0" />
+            <TextField fx:id="tfSearch" promptText="데이터입력" />
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#btnSearchClicked" text="검색" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="zipTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="zipCol" prefWidth="75.0" text="우편번호" />
+          <TableColumn fx:id="sidoCol" prefWidth="49.0" text="시도" />
+            <TableColumn fx:id="gugunCol" prefWidth="74.0" text="구군" />
+            <TableColumn fx:id="dongCol" prefWidth="95.0" text="동" />
+            <TableColumn fx:id="riCol" minWidth="0.0" prefWidth="82.0" text="리" />
+            <TableColumn fx:id="bldgCol" prefWidth="100.0" text="빌딩" />
+            <TableColumn fx:id="bunjiCol" prefWidth="122.0" text="번지" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

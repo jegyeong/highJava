@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="prod">
+	<select id="getAllLprod" resultClass="lprodVo">
+		select * from lprod
+	</select>
+	
+	<select id="getProdList" parameterClass="String" resultClass="prodVo">
+		select  
+			PROD_ID, PROD_NAME,	PROD_LGU, PROD_BUYER, PROD_COST,
+			PROD_PRICE, PROD_SALE, PROD_OUTLINE, PROD_DETAIL, PROD_IMG,
+			PROD_TOTALSTOCK, PROD_INSDATE, PROD_PROPERSTOCK, PROD_SIZE,
+			PROD_COLOR, PROD_DELIVERY, PROD_UNIT, PROD_QTYIN, PROD_QTYSALE,
+			nvl(PROD_MILEAGE, 0) PROD_MILEAGE
+		from prod where prod_lgu=#prod_lgu#
+	</select>
+	
+	<select id="getProd" parameterClass="String" resultClass="prodVo">
+		select  
+			PROD_ID, PROD_NAME,	PROD_LGU, PROD_BUYER, PROD_COST,
+			PROD_PRICE, PROD_SALE, PROD_OUTLINE, PROD_DETAIL, PROD_IMG,
+			PROD_TOTALSTOCK, PROD_INSDATE, PROD_PROPERSTOCK, PROD_SIZE,
+			PROD_COLOR, PROD_DELIVERY, PROD_UNIT, PROD_QTYIN, PROD_QTYSALE,
+			nvl(PROD_MILEAGE, 0) PROD_MILEAGE
+		from prod where prod_id=#prod_id#
+	</select>
+	
+
+</sqlMap>	
+
+
+
+
+
+
+
+

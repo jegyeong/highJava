@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="application.ServerMainController">
+   <children>
+      <Button fx:id="btnServerStart" layoutX="35.0" layoutY="31.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="228.0" text="Server Start" />
+      <Label layoutX="301.0" layoutY="36.0" text="접속자수 :" />
+      <Label fx:id="lblCount" layoutX="380.0" layoutY="36.0" text="0 명" />
+      <TextArea fx:id="taOutputMsg" layoutX="35.0" layoutY="85.0" prefHeight="301.0" prefWidth="433.0" />
+   </children>
+</AnchorPane>
